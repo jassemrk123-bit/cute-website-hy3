@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cute Things · Mochi</title>
+  <meta name="description" content="A filterable, searchable gallery of cute GitHub things.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">🍡</span><span class="brand-name">Mochi</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Cute Things</a>
+        <a href="categories.html">Categories</a>
+        <a href="play.html">Play</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section style="padding-top:2.5rem">
+      <div class="section-head reveal">
+        <h2>cute things on GitHub</h2>
+        <p>tap 🤍 to save a favorite — it stays on your phone</p>
+      </div>
+
+      <div class="controls reveal">
+        <input id="search" class="search" type="search" placeholder="search cuties… (try “cat” or “font”)">
+        <div class="fav-bar">💗 saved: <span id="fav-count">0</span></div>
+        <div id="cats" class="chips"></div>
+      </div>
+
+      <div id="repo-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with <span class="heart">💗</span> for someone very special.</p>
+    <p class="footer-small">© <span class="year"></span> Mochi · the softest corner of GitHub</p>
+  </footer>
+
+  <script src="assets/data.js" defer></script>
+  <script src="assets/gallery.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
