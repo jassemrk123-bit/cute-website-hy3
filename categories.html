@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Categories · Mochi</title>
+  <meta name="description" content="Browse cute GitHub things by category.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">🍡</span><span class="brand-name">Mochi</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Cute Things</a>
+        <a href="categories.html">Categories</a>
+        <a href="play.html">Play</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section style="padding-top:2.5rem">
+      <div class="section-head reveal">
+        <h2>browse by category</h2>
+        <p>pick a pocket of softness</p>
+      </div>
+      <div id="cat-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with <span class="heart">💗</span> for someone very special.</p>
+    <p class="footer-small">© <span class="year"></span> Mochi · the softest corner of GitHub</p>
+  </footer>
+
+  <script src="assets/data.js" defer></script>
+  <script defer>
+    (function () {
+      var data = window.MOCHI_DATA || [];
+      var grid = document.getElementById('cat-grid');
+      var meta = {
+        'Animals':      { ico: '🐾' },
+        'Tools':        { ico: '🛠️' },
+        'Art & ASCII':  { ico: '🎨' },
+        'Learning':     { ico: '📚' },
+        'Fonts & Type': { ico: '🔤' },
+        'Games & Toys': { ico: '🧸' }
+      };
+      var cats = {};
+      data.forEach(function (r) { cats[r.category] = (cats[r.category] || 0) + 1; });
+      var html = Object.keys(cats).map(function (c) {
+        var ico = (meta[c] && meta[c].ico) || '✨';
+        return '<a class="cat-card reveal" href="gallery.html?cat=' + encodeURIComponent(c) + '">' +
+                 '<div class="ico">' + ico + '</div>' +
+                 '<h3>' + c + '</h3>' +
+                 '<div class="count">' + cats[c] + ' cuties →</div>' +
+               '</a>';
+      }).join('');
+      grid.innerHTML = html;
+    })();
+  </script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
