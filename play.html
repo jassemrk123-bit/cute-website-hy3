@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Play · Mochi</title>
+  <meta name="description" content="Give Mochi headpats and find your cute GitHub spirit critter.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">🍡</span><span class="brand-name">Mochi</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Cute Things</a>
+        <a href="categories.html">Categories</a>
+        <a href="play.html">Play</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="pat-stage reveal">
+      <h2 style="margin-bottom:.4rem">give mochi a headpat 🍡</h2>
+      <p style="color:var(--ink-soft)">tap as many times as you like</p>
+      <button id="pat-btn" class="pat-btn" aria-label="Pat Mochi">🍡</button>
+      <div class="pat-count"><span id="pat-count">0</span> headpats</div>
+      <div class="pat-msg" id="pat-msg">boop me~ 💕</div>
+    </section>
+
+    <section style="padding-bottom:3rem">
+      <div class="section-head reveal">
+        <h2>which cute GitHub critter are you?</h2>
+        <p>three questions, one very soft answer</p>
+      </div>
+      <div id="quiz" class="quiz reveal"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with <span class="heart">💗</span> for someone very special.</p>
+    <p class="footer-small">© <span class="year"></span> Mochi · the softest corner of GitHub</p>
+  </footer>
+
+  <script src="assets/play.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
