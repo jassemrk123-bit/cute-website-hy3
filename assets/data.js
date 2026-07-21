@@ -1,8 +1,8 @@
-/* Curated, playful list of cute/wholesome GitHub things.
+/* Curated, playful list of cute/wholesome little projects.
    Descriptions are written with love + a wink. */
 window.MOCHI_DATA = [
   { id:'cat-ascii', emoji:'😺', name:'cat-ascii-faces', owner:'sindresorhus',
-    desc:'A delightful collection of cat ASCII faces to brighten any terminal day.',
+    desc:'A delightful collection of cat ASCII faces to brighten any day.',
     category:'Animals', stars:'1.4k', url:'https://github.com/sindresorhus/cat-ascii-faces' },
   { id:'bat', emoji:'🦇', name:'bat', owner:'sharkdp',
     desc:'A cat clone with wings: syntax-highlighted, git-aware, and just lovely.',
@@ -35,7 +35,7 @@ window.MOCHI_DATA = [
     desc:'A more colorful, friendlier replacement for the cat command.',
     category:'Tools', stars:'2k', url:'https://github.com/ogham/dog' },
   { id:'tldr', emoji:'📖', name:'tldr', owner:'tldr-pages',
-    desc:'Simplified, example-driven man pages. Gentle on beginners.',
+    desc:'Simplified, example-driven pages. Gentle on beginners.',
     category:'Learning', stars:'50k', url:'https://github.com/tldr-pages/tldr' },
   { id:'asciinema', emoji:'🎬', name:'asciinema', owner:'asciinema',
     desc:'Record and share your terminal sessions as tiny, shareable movies.',
